@@ -35,6 +35,7 @@ public class TicketEntity {
 
     private String bookedSeats;
 
+    // Ticket is child wrt to user
     @JoinColumn
     @ManyToOne
     private UserEntity userEntity;

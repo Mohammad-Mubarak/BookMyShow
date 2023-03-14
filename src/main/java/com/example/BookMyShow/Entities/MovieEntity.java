@@ -1,6 +1,8 @@
 package com.example.BookMyShow.Entities;
 
 
+import com.example.BookMyShow.Enums.Genre;
+import com.example.BookMyShow.Enums.Language;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

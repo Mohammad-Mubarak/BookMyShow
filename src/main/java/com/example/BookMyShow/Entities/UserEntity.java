@@ -34,6 +34,7 @@ public class UserEntity {
 
     private String address;
 
+    // User is parent wrt to ticket
     @OneToMany(mappedBy = "userEntity",cascade = CascadeType.ALL)
     private List<TicketEntity> bookedTickets = new ArrayList<>();
 

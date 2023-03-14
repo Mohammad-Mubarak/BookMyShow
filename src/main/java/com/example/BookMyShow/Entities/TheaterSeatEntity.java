@@ -1,5 +1,6 @@
 package com.example.BookMyShow.Entities;
 
+import com.example.BookMyShow.Enums.SeatType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,6 +25,7 @@ public class TheaterSeatEntity {
 
     private String seatNo;
 
+    // child wrt to theater
     @ManyToOne
     @JoinColumn
     private TheaterEntity theaterEntity;

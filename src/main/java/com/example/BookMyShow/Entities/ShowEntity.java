@@ -1,5 +1,6 @@
 package com.example.BookMyShow.Entities;
 
+import com.example.BookMyShow.Enums.ShowType;
 import jakarta.persistence.*;
 import jdk.jfr.Timestamp;
 import lombok.AllArgsConstructor;
@@ -47,7 +48,7 @@ public class ShowEntity {
     @JoinColumn
     private MovieEntity movieEntity;
 
-
+  // show is child wrt to threater
     @ManyToOne
     @JoinColumn
     private TheaterEntity theaterEntity;
@@ -56,6 +57,7 @@ public class ShowEntity {
     @OneToMany(mappedBy = "showEntity",cascade = CascadeType.ALL)
     private List<TicketEntity> listOfBookedTickets = new ArrayList<>();
 
+    // show is parent wrt to showseat
     @OneToMany(mappedBy = "showEntity",cascade = CascadeType.ALL)
     private List<ShowSeatEntity> listOfShowSeats = new ArrayList<>();
 
